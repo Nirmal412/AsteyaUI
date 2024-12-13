@@ -1,0 +1,221 @@
+.shopping-container {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 0 5rem;
+    background-color: white;
+  }
+  
+  .header-section {
+    margin-bottom: 2rem;
+  }
+
+  .offering-div{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+  }
+
+  .header-section span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+  }
+
+  .header-section h1{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .header-section p{
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    text-align: justify;
+  }
+  
+  .offerings {
+    color: #22c55e;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    text-align: justify;
+  }
+  
+  .description {
+    color: #6b7280;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 800px;
+    text-align: justify;
+  }
+  
+  .feature-card {
+    background-color: #d9f99d;
+    border-radius: 2rem;
+    padding: 3rem;
+    position: relative;
+    margin-bottom: 2rem;
+    border-bottom: 2rem solid #064e3b;
+  }
+  
+  .number {
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    max-width: 500px;
+  }
+  
+  .feature-description {
+    color: #374151;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 600px;
+  }
+  
+  .cards-container {
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    height: 200vh; /* Extend the height for smooth scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feature-card {
+    position: sticky;
+    top: 20vh; /* Cards stick at 20% of the viewport height */
+    width: 80%;
+    background-color: #d9f99d;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+    border-bottom: 2rem solid #064e3b;
+    transform: translateY(var(--offset, 0px));
+    z-index: var(--zIndex, 1); /* Dynamically adjust z-index */
+    transition: transform 0.3s ease, z-index 0.3s ease;
+  }
+  
+  .feature-card.behind {
+    --offset: -10px; /* Slightly move cards behind upward */
+    --zIndex: 0; /* Move cards visually behind */
+  }
+  
+  .feature-card.bunched {
+    --offset: calc(var(--index) * -10px); /* Stack cards with increasing offset */
+    --zIndex: calc(100 - var(--index)); /* Ensure higher cards are above */
+  }
+  
+  @media (max-width: 768px) {
+    .feature-card {
+      position: sticky;
+      top: 20vh;
+      width: 90%;
+      transform: translateX(var(--offsetX, 0px)) rotate(var(--rotation, 0deg));
+      z-index: var(--zIndex, 1);
+      transition: transform 0.3s ease, z-index 0.3s ease;
+    }
+  
+    .feature-card.bunched {
+      --offsetX: calc(var(--index) * -20px); /* Cards move left with increasing offset */
+      --rotation: calc(var(--index) * -10deg); /* Cards rotate left with increasing angle */
+      --zIndex: calc(100 - var(--index)); /* Ensure proper stacking */
+    }
+  }
+  
+  
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .cards-container {
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 70px;
+      height: 230vh; /* Extend the height for smooth scrolling */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .shopping-container {
+      padding: 0 3rem;
+    }
+
+    .offering-div{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 100%;
+    }
+    .offering-div .title{
+      width: 100%;
+    }
+    .offering-div .description{
+      width: 100%;
+      
+    }
+
+    .feature-title {
+      text-align: left;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 1rem;
+      max-width: 500px;
+    }
+    
+    .feature-description {
+      text-align: left;
+      color: #374151;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      max-width: 600px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .feature-card {
+      padding: 2rem;
+    }
+  
+    .feature-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  

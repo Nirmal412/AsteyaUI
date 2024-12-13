@@ -1,0 +1,8 @@
+.green-header{
+        background: linear-gradient(135deg, #0A1F0A 0%, #1A4F1A);
+        min-height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+

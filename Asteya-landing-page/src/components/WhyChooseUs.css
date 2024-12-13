@@ -1,0 +1,118 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+  }
+  
+  .Whyus-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .why-choose-us {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 2rem;
+    color: #18d021;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  
+  .subheading {
+    font-size: 1.5rem;
+    color: #000000;
+    font-size: 30px;
+    align-items: center;
+    /* display: flex; */
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cards {
+    margin: 0 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .card {
+    width: 24%; /* Adjust the width for the square shape */
+    border: 1px solid #dfdfdf;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    aspect-ratio: 1.2;
+    transition: background-color 1s ease; /* Transition the background on hover */
+  }
+  
+  .card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    color: #000000;
+  }
+  
+  .card .card-description {
+    font-size: 1rem;
+    color: #777;
+    margin: 20px;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #dceddc, #fff); 
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  @media screen and (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .Whyus-container {
+      padding:0 2rem;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .subheading {
+      font-size: 1.2rem;
+    }
+  }
+  

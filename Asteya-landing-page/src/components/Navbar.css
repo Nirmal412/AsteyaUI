@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+.navbar {
+  padding: 20px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+.logo-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4CAF50;
+}
+
+.contact-button {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 20px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+}
+
+/* Burger Button */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed; /* Fixed to prevent scrolling issues */
+  top: 0;
+  right: -100%; /* Slide out of view */
+  width: 80%; /* Adjust width for smaller screens */
+  height: 100vh;
+  background-color: #003f00;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  right: 0; /* Slide into view when active */
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar-links a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.sidebar-links a:hover {
+  color: #4CAF50;
+}
+
+.sidebar .contact-button {
+  background-color: #4CAF50;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar .close-btn:hover {
+  color: #4CAF50;
+}
+
+/* Desktop (Large Screen) Styles */
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none; /* Hide burger menu on large screens */
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex; /* Keep normal navbar layout */
+    gap: 30px;
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar on large screens */
+  }
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex; /* Show burger menu on mobile */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links initially on mobile */
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #003f00;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .sidebar {
+    width: 80%; /* Adjust sidebar width for mobile screens */
+  }
+}
